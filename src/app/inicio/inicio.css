@@ -1,0 +1,90 @@
+/* ===== Contenedor de inicio ===== */
+.inicio {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columnas en desktop */
+    gap: 2rem;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    margin: 0;
+    color: #fff;
+    width: 100%;
+   box-shadow: 0 5px 8px rgba(246, 247, 244, 0.952);
+}
+
+/* ===== Texto principal ===== */
+.textInicio {
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 25px 30px;
+    box-sizing: border-box;
+
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4), inset 0 0 10px rgba(255,255,255,0.1);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.textInicio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.5), inset 0 0 15px rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.08);
+}
+
+/* ===== Imagen de inicio ===== */
+.imgInicio img {
+    width: 70%;
+    border-radius: 50%; /* Forma circular */
+    display: block;
+    margin-left: auto; /* Centrar horizontalmente en móviles */
+    margin-right: auto;
+   box-shadow: 0px 5px 15px rgb(241, 239, 239);;
+}
+
+/* ===== Estilos para párrafos y subtítulos ===== */
+.textInicio p {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.textInicio h6 {
+    color: rgb(158, 156, 156);
+    text-shadow: 4px 5px 20px rgb(245, 241, 241);
+}
+
+/* ===== Responsive: Tablets ===== */
+@media (max-width: 992px) {
+    .inicio {
+        grid-template-columns: 1fr; /* 1 columna */
+        text-align: center;         /* Centra todo */
+    }
+
+    .imgInicio img {
+        width: 80%;                 /* Imagen más grande en tablet/móvil */
+        margin: 20px auto;
+    }
+
+    .textInicio {
+        margin: 20px auto;
+    }
+}
+
+/* ===== Responsive: Móviles ===== */
+@media (max-width: 600px) {
+    .textInicio {
+        padding: 20px 15px;
+        font-size: 1rem;
+    }
+
+    .imgInicio img {
+        width: 90%;
+    }
+}

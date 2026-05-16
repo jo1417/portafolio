@@ -1,0 +1,140 @@
+/* ===== NAVBAR GENERAL ===== */
+.navbar {
+ position: fixed;         /* Fija la barra arriba */
+  top: 0;
+  width: 100%;
+ 
+  background: rgba(15, 32, 39, 0.08);  /* Fondo transparente */
+  backdrop-filter: blur(12px);         /* Glassmorphism */
+  -webkit-backdrop-filter: blur(12px); /* Safari */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+  transition: all 0.4s ease;           /* Transición suave */
+    
+}
+
+/* ===== CONTENEDOR INTERNO ===== */
+.nav-container {
+   position: fixed;         /* Fija la barra arriba */
+  top: 0;
+  padding: 10px;
+  width: 100%;
+  display: flex;     
+   align-items: center;               /* Flex para alinear logo, links y iconos */
+  justify-content:space-between;  /* Logo a la izquierda, links a la derecha */    
+   z-index: 1000;    /* Espacio lateral */
+     background: rgba(15, 32, 39, 0.08);  /* Fondo transparente */
+  backdrop-filter: blur(12px);         /* Glassmorphism */
+  -webkit-backdrop-filter: blur(12px); /* Safari */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+  transition: all 0.4s ease;  
+}
+
+/* ===== LOGO ===== */
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #f1efef;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px #00d4ff60;
+  transition: text-shadow 0.3s ease;
+ 
+}
+
+.logo:hover {
+  text-shadow: 0 0 15px #00ffffa0;
+}
+
+/* ===== LINKS DE NAVEGACIÓN ===== */
+.nav-links {
+  padding: 10px;
+  list-style: none;
+  display: flex;
+  gap: 2rem; 
+   box-shadow: 0 0 8px rgba(0, 255, 255, 0.7);
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.7);
+  border-radius: 8px;                         /* Separación entre enlaces */
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 10px;                     /* Mantiene altura constante */
+  transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.7);
+   background-color:rgba(0, 255, 255, 0.7); ;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.7);
+  border-radius: 8px;                /* Bordes suaves al hover */
+}
+
+/* ===== ICONOS ===== */
+
+
+.iconos i {
+  margin-left: 20px;                 /* Separación entre iconos */
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover en iconos */
+.iconos i:hover {
+  transform: scale(1.2);
+}
+
+/* Colores específicos */
+.iconogmail { color: rgb(151, 8, 8); }
+.iconowhatsapp { color: rgb(13, 112, 26); }
+.iconogithub { color: rgb(204, 202, 202); }
+
+/* ===== BOTÓN TOGGLE (MÓVILES) ===== */
+.toggle-btn {
+  display: none;                     /* Oculto en desktop */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .toggle-btn {
+    display: block;                  /* Visible en móviles */
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: rgba(15,32,39,0.95);
+    flex-direction: column;           /* Links en columna */
+    width: 100%;
+    display: none;                    /* Oculto por defecto */
+    padding: 1rem 0;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    z-index: 1001;                    /* Siempre encima */
+    text-align: center;
+  }
+
+  .nav-links.open {
+    display: flex;
+    animation: slideDown 0.3s ease;  /* Animación al abrir */
+  }
+
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .nav-links li {
+    margin: 10px 0;                  /* Espacio entre enlaces móviles */
+  }
+}

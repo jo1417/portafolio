@@ -1,0 +1,114 @@
+/* ===== Contenedor principal ===== */
+.contenedor {
+  text-align: center; /* Centra títulos y elementos */
+  padding: 50px 20px; /* Espaciado superior e inferior */
+  background-color: #121212; /* Fondo oscuro */
+  color: #fff; /* Texto blanco */
+  font-family: 'Poppins', sans-serif; /* Tipografía moderna */
+}
+
+/* ===== Título de la sección ===== */
+.contenedor h1 {
+  margin-bottom: 40px; /* Separación del grid */
+  font-size: 2.2rem;
+  color: #fff;
+}
+
+/* ===== Grid de proyectos ===== */
+.proyectos {
+  display: grid; /* Activar sistema de cuadrícula */
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas por fila en escritorio */
+  gap: 1.5rem; /* Espacio entre tarjetas */
+  justify-items: center; /* Centra horizontalmente cada tarjeta */
+  align-items: start; /* Alinea arriba las tarjetas */
+  max-width: 1400px; /* Limita ancho máximo */
+  margin: 0 auto; /* Centra el grid */
+  padding: 30px 20px;
+  box-sizing: border-box;
+}
+
+/* ===== Tarjetas de cada proyecto ===== */
+.proyecto {
+  display: flex; /* Flex vertical */
+  flex-direction: column; /* Imagen encima del texto */
+  align-items: center; /* Centrado horizontal */
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.05); /* Fondo semi-transparente */
+  border-radius: 12px; /* Bordes redondeados */
+  padding: 15px;
+  backdrop-filter: blur(10px); /* Efecto glassmorphism */
+  box-shadow: 0 0 6px rgba(241, 21, 21, 0.6); /* Sombra roja suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación hover */
+  width: 100%;
+  max-width: 300px; /* Tamaño equilibrado */
+  min-height: 280px; /* Altura mínima */
+}
+
+/* ===== Hover de las tarjetas ===== */
+.proyecto:hover {
+  transform: translateY(-5px); /* Eleva tarjeta al pasar mouse */
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.8); /* Sombra más intensa */
+}
+
+/* ===== Imagen dentro de la tarjeta ===== */
+.proyecto img {
+  width: 100%;
+  height: 160px;
+  border-radius: 10px; /* Bordes redondeados */
+  margin-bottom: 10px;
+  object-fit: cover; /* Ajusta la imagen sin deformar */
+  transition: transform 0.3s ease; /* Animación de zoom */
+}
+
+/* ===== Hover en la imagen ===== */
+.proyecto:hover img {
+  transform: scale(1.05); /* Zoom leve al pasar mouse */
+}
+
+/* ===== Título de cada proyecto ===== */
+.proyecto h2 {
+  margin: 10px 0 8px 0;
+  font-size: 1.2rem;
+  color: #ff4d4d; /* Color llamativo */
+}
+
+/* ===== Descripción de cada proyecto ===== */
+.proyecto p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #fff;
+  margin: 0;
+}
+
+/* ===== Responsive: Tablets ===== */
+@media (max-width: 992px) {
+  .proyectos {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas por fila */
+  }
+
+  .proyecto {
+    max-width: 90%; /* Tarjetas más anchas */
+  }
+}
+
+/* ===== Responsive: Móviles ===== */
+@media (max-width: 600px) {
+  .proyectos {
+    grid-template-columns: 1fr; /* 1 columna por fila */
+    padding: 15px;
+  }
+
+  .proyecto {
+    max-width: 90%;
+    padding: 10px;
+  }
+
+  .proyecto img {
+    height: 150px; /* Ajuste de altura en móviles */
+  }
+
+  .proyecto p {
+    font-size: 0.9rem; /* Texto más pequeño */
+  }
+}
+ 

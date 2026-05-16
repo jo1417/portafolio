@@ -1,0 +1,35 @@
+<form class="formulario" action="">
+
+<div class="formulario-contacto">
+  <h2>Contáctame</h2>
+
+  <!-- Nombre -->
+  <input
+    type="text"
+    placeholder="Nombre"
+    [(ngModel)]="nombre"
+    name="nombre"
+    required
+  />
+
+  <!-- Correo -->
+  <input
+    type="email"
+    placeholder="Correo"
+    [(ngModel)]="correo"
+    name="correo"
+  />
+
+  <!-- Mensaje -->
+  <textarea
+    placeholder="Mensaje"
+    [(ngModel)]="mensaje"
+    name="mensaje"
+    required
+  ></textarea>
+
+  <!-- Botón enviar -->
+  <button (click)="enviarWhatsApp()">Enviar a WhatsApp</button>
+</div>
+
+</form>

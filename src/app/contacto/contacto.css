@@ -1,0 +1,82 @@
+/* contacto.component.css*/
+
+/* ===== Contenedor general ===== */
+.formulario {
+  display: flex;                    /* Flex para centrar el formulario */
+  justify-content: center;           /* Centro horizontal */
+  align-items: center;               /* Centro vertical */
+  min-height: 100vh;                 /* Ocupa toda la altura */
+  padding: 20px;
+  background: #121212;  
+           /* Fondo oscuro opcional */
+}
+
+/* ===== Formulario de contacto ===== */
+.formulario-contacto {
+  width: 100%;                        /* Ocupa todo el contenedor en móviles */
+  max-width: 500px;                   /* Máximo ancho en desktop */
+  padding: 40px;
+  background-color: rgba(249, 249, 249, 0.95) transparent; /* Fondo semi-transparente */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);     /* Sombra más marcada */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-sizing: border-box;
+  border-color: rgb(250, 250, 248);
+   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+/* ===== Inputs y textarea ===== */
+.formulario-contacto input,
+.formulario-contacto textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+  border-color: #2196F3;
+  box-shadow: 0 0 5px rgba(33, 150, 243, 0.5);
+  outline: none;
+}
+
+/* ===== Botón ===== */
+.formulario-contacto button {
+  padding: 12px;
+  background-color: #25D366; /* verde WhatsApp */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.formulario-contacto button:hover {
+  background-color: #128C7E;
+  transform: translateY(-2px); /* Pequeño efecto al pasar mouse */
+}
+
+/* ===== Título ===== */
+.formulario-contacto h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .formulario-contacto {
+    padding: 25px 20px; /* Ajusta padding en móviles */
+  }
+
+  .formulario-contacto button {
+    font-size: 14px;
+  }
+}
