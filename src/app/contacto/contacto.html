@@ -1,35 +1,28 @@
-<form class="formulario" action="">
+
+<!--  el submit abarca todo el formulario, lo que permite que el usuario pueda presionar enter para enviar el mensaje, lo que mejora la experiencia del usuario-->
+<form id="contacto" class="formulario" (ngSubmit)="enviarWhatsApp()"> 
 
 <div class="formulario-contacto">
-  <h2>Contáctame</h2>
+
+  <h2>{{ titulo }}</h2>
 
   <!-- Nombre -->
-  <input
-    type="text"
-    placeholder="Nombre"
-    [(ngModel)]="nombre"
-    name="nombre"
-    required
+  <input type="text" placeholder="Nombre" [(ngModel)]="nombre" name="nombre" required
   />
 
   <!-- Correo -->
-  <input
-    type="email"
-    placeholder="Correo"
-    [(ngModel)]="correo"
-    name="correo"
+  <input type="email" placeholder="Correo (opcional)" [(ngModel)]="correo" name="correo" 
   />
 
   <!-- Mensaje -->
-  <textarea
-    placeholder="Mensaje"
-    [(ngModel)]="mensaje"
-    name="mensaje"
-    required
+  <textarea  placeholder="Mensaje"  [(ngModel)]="mensaje"  name="mensaje" required
   ></textarea>
 
   <!-- Botón enviar -->
-  <button (click)="enviarWhatsApp()">Enviar a WhatsApp</button>
+  <button type="submit">
+    Enviar a WhatsApp
+  </button> <!-- type="submit" es mas pratico y funciona como un formulario real, ademas de que el usuario puede presionar enter para enviar el mensaje, lo que mejora la experiencia del usuario-->
+  
 </div>
 
 </form>

@@ -9,7 +9,13 @@ import { CommonModule } from '@angular/common';
 })
 export class Inicio {
 
-nombre: string = 'soy john duque';
-profesion: string = 'Tecnologo En Desarrollo De Software';
-descripcion: string = 'Soy un tecnólogo en desarrollo de software apasionado por la tecnología y la creación de soluciones web. Aunque no cuento con experiencia laboral, he desarrollado proyectos personales que reflejan mi compromiso y mis ganas de seguir aprendiendo.    Busco una oportunidad para crecer profesionalmente y aportar valor con mis habilidades.';
+items = [
+    {
+nombre: 'Hola, soy John Duque.',
+profesion: 'Tecnologo En Desarrollo De Software',
+descripcion: 'Me gusta la tecnología y todo lo relacionado con el desarrollo web. He dedicado tiempo a crear proyectos personales que me han ayudado a fortalecer mis conocimientos y seguir aprendiendo. Mi objetivo es continuar creciendo profesionalmente, adquirir experiencia y convertir mi pasión por el desarrollo en una carrera sólida.',
+fotoPerfil:'perfil1.png'
+}
+    ];
+
 }

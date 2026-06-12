@@ -1,23 +1,23 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-
 <div class="nav-container">
 
-  <h1 class="logo">MiPortafolio</h1>
+  <h1 class="logo_nombre">{{nombre}}</h1>
 
   <button class="toggle-btn" (click)="toggleMenu()">
-    <span class="material-icons">{{ menuAbierto() ? 'close' : 'menu' }}</span>
+    <span class="material-icons">{{ menuAbierto() ? '=' : '=' }}</span>
   </button>
 
   <ul class="nav-links" [class.open]="menuAbierto()">
     <li><a href="#inicio" (click)="cerrarMenu()">Inicio</a></li>
     <li><a href="#proyect" (click)="cerrarMenu()">Proyectos</a></li>
     <li><a href="#sobremi" (click)="cerrarMenu()">Sobre mí</a></li>
-    <li><a href="#" (click)="cerrarMenu()">Contacto</a></li>
+    <li><a href="#contacto" (click)="cerrarMenu()">Contacto</a></li>
   </ul>
 
    <ul class="iconos">
     <li>
+       
       <a class="iconogithub" href="https://github.com/" target="_blank">
         <i class="fa-brands fa-github fa-2x"></i>
       </a>

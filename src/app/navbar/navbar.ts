@@ -8,6 +8,8 @@ import { Component, signal } from '@angular/core';
 })
 export class Navbar {
 
+   nombre = 'MiPortafolio';
+
    menuAbierto = signal(false);
 
   toggleMenu() {

@@ -1,29 +1,38 @@
 
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+
+}
+
 .cajaSobremi {
   display: grid;
-  margin: auto;
-
+  padding: 20px;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
   width: 100%;
-  max-width: 1000px;
-  min-height: 80vh;
+  border: 2px solid rgb(14, 13, 13);
+  
+  
+ 
 } 
 
 .sobremi{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin: 30px;
-    padding: 10px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid rgb(14, 13, 13);
+  padding: 20px;
 }
 
 .sobremi h2{
- font-size: 1.4rem;
-  font-weight: 700;
-  color: #f1efef;
+ font-size: 1.6rem;
+  font-weight: 780;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0a0909;
   letter-spacing: 1px;
-  text-shadow: 0 0 15px #f2f3f360;
   transition: text-shadow 0.3s ease;
 }
 /* Cajas pequeñas */
@@ -35,7 +44,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 15px;
+  padding: 35px;
   color: rgb(15, 15, 15);
   font-size: 0.9rem;
   backdrop-filter: blur(10px); /* Efecto glassmorphism */
@@ -44,7 +53,26 @@
   backdrop-filter: blur(10px);
   background-color: #fff;
  
+ 
   
+}
+
+.cajaPequeña p {
+  margin-top: 19px;
+  text-align: center;
+  color: #0a0909;
+  background: rgb(255, 255, 255);
+}
+
+.cajaPequeña h2 {
+  position: absolute;
+  top: 10px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-family: 'Arial', sans-serif;
+  background: rgb(255, 255, 255);
 }
 
 /* Caja grande */
@@ -67,7 +95,9 @@
 .cajaGrande h2 {
   margin-bottom: 20px;
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  background: rgb(255, 255, 255);
+  font-weight: 600;
 }
 
 /* Contenedor de íconos */
@@ -77,10 +107,12 @@
   align-items: center;
   gap: 40px;
   flex-wrap: wrap;
+  background: rgb(255, 255, 255);
 }
 
 .devicon p{
     color: black;
+    background: rgb(255, 255, 255);
 }
 
 /* Cada habilidad individual */
@@ -88,12 +120,14 @@
   display: flex;
   flex-direction: column; /* icono arriba, texto abajo */
   align-items: center;
+  background: rgb(255, 255, 255);
   text-align: center;
 }
 
 .skill img {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
+  background: rgb(255, 255, 255);
   transition: transform 0.3s ease;
 }
 
@@ -104,7 +138,15 @@
 .skill p {
   margin-top: 8px;
   font-size: 0.9rem;
-  color: #fff;
+  color: #0a0909;
   text-transform: uppercase;
   letter-spacing: 1px;
+  background: rgb(255, 255, 255);
+}
+
+
+  @media (max-width: 992px) {
+  .cajaSobremi {
+    grid-template-columns: 1fr; /* pasa a una sola columna */
+  }
 }

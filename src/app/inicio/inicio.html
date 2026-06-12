@@ -1,14 +1,15 @@
-<section id="inicio"  class="inicio">
+<section id="inicio"  class="inicio" *ngFor="let item of items">
     <div class="textInicio">
-        <h1>{{ nombre }}</h1>
-        <h6>{{ profesion }}</h6>
-        <p>{{ descripcion }}</p>
-
-        
+        <h1>{{ item.nombre }}</h1>
+        <h6>{{ item.profesion }}</h6>
+        <p>{{ item.descripcion }}</p>
     </div>
 
-    <div  class="imgInicio">
-        <img src="/foto.png" alt="">
-         </div>
+  
+         <div class="imgInicio">
+    <img [src]="item.fotoPerfil" alt="Foto de perfil">
+  </div>
+   
+
 </section>
 

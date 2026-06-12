@@ -1,140 +1,185 @@
-/* ===== NAVBAR GENERAL ===== */
+
+/* navbar principal */
+
 .navbar {
- position: fixed;         /* Fija la barra arriba */
-  top: 0;
-  width: 100%;
- 
-  background: rgba(15, 32, 39, 0.08);  /* Fondo transparente */
-  backdrop-filter: blur(12px);         /* Glassmorphism */
-  -webkit-backdrop-filter: blur(12px); /* Safari */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
-  transition: all 0.4s ease;           /* Transición suave */
-    
+ position: fixed;
+ top: 0;
+ width: 100%;
+ background: rgba(8, 8, 8, 0.964);
+ z-index: 1000;   
+ box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+ transition: all 0.4s ease;         
 }
 
-/* ===== CONTENEDOR INTERNO ===== */
+/* para que el contenido no quede debajo del navbar */
+body {
+ padding-top: 60px;
+}
+
+/*contenido interno*/
+
 .nav-container {
-   position: fixed;         /* Fija la barra arriba */
-  top: 0;
-  padding: 10px;
-  width: 100%;
-  display: flex;     
-   align-items: center;               /* Flex para alinear logo, links y iconos */
-  justify-content:space-between;  /* Logo a la izquierda, links a la derecha */    
-   z-index: 1000;    /* Espacio lateral */
-     background: rgba(15, 32, 39, 0.08);  /* Fondo transparente */
-  backdrop-filter: blur(12px);         /* Glassmorphism */
-  -webkit-backdrop-filter: blur(12px); /* Safari */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
-  transition: all 0.4s ease;  
+ display: flex;    
+ position:fixed; 
+ align-items: center;            
+ justify-content:space-between; 
+ padding: 0;
+ width: 100%;
+ height: 3rem;  
+ background: rgba(8, 8, 8, 0.964);
+ z-index: 1000;   
+ border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+ box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+ transition: all 0.4s ease;  
 }
 
-/* ===== LOGO ===== */
-.logo {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #f1efef;
-  letter-spacing: 1px;
-  text-shadow: 0 0 8px #00d4ff60;
-  transition: text-shadow 0.3s ease;
- 
+/* logo nombre */
+
+.logo_nombre {
+ display: flex;
+ justify-content: center;
+ text-align: center;
+ margin: 0;
+ margin-left: 20px;
+ font-size: 1.4rem;
+ font-weight: 800;
+ color: #0b0b0b;
+ letter-spacing: 2px;
+ text-shadow: 0 0 8px #eff3f4;
+ transition: text-shadow 0.3s ease;
 }
 
-.logo:hover {
-  text-shadow: 0 0 15px #00ffffa0;
+.logo_nombre:hover {
+ text-shadow: 0 0 15px #f6f9f9;
 }
 
-/* ===== LINKS DE NAVEGACIÓN ===== */
+/* link de navegacion */
+
 .nav-links {
-  padding: 10px;
-  list-style: none;
-  display: flex;
-  gap: 2rem; 
-   box-shadow: 0 0 8px rgba(0, 255, 255, 0.7);
-  text-shadow: 0 0 8px rgba(0, 255, 255, 0.7);
-  border-radius: 8px;                         /* Separación entre enlaces */
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ list-style: none;
+ margin: 0;
+ gap: 1rem; 
+ text-shadow: 0 0 8px rgba(241, 241, 241, 0.7);
+ border-radius: 8px;  
 }
 
 .nav-links li a {
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-  padding: 10px;                     /* Mantiene altura constante */
-  transition: all 0.3s ease;
+ text-decoration: none;
+ color: white;
+ font-weight: 700;
+ padding: 10px;                    
+ transition: all 0.2s ease;
 }
 
 .nav-links li a:hover {
-  box-shadow: 0 0 8px rgba(0, 255, 255, 0.7);
-   background-color:rgba(0, 255, 255, 0.7); ;
-  text-shadow: 0 0 8px rgba(0, 255, 255, 0.7);
-  border-radius: 8px;                /* Bordes suaves al hover */
+ box-shadow: 0 0 8px rgba(120, 122, 122, 0.7);
+ background-color: rgba(137, 144, 144, 0.7);
+ text-shadow: 0 0 8px rgba(228, 240, 240, 0.7);
+ border-radius: 5px;               
 }
 
-/* ===== ICONOS ===== */
-
+/* iconos del navbar */
 
 .iconos i {
-  margin-left: 20px;                 /* Separación entre iconos */
-  font-size: 1.5rem;
-  cursor: pointer;
-  transition: transform 0.3s ease, color 0.3s ease;
+ margin: 0 10px;  
+ margin-top: 15px;             
+ list-style: none;              
+ font-size: 1.5rem;
+ font-weight: 900;
+ cursor: pointer;
+ transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.iconos li {
+ list-style: none;               
 }
 
 /* Hover en iconos */
+
 .iconos i:hover {
-  transform: scale(1.2);
+ transform: scale(1.2);
 }
 
-/* Colores específicos */
-.iconogmail { color: rgb(151, 8, 8); }
-.iconowhatsapp { color: rgb(13, 112, 26); }
-.iconogithub { color: rgb(204, 202, 202); }
+/* Colores específicos de los iconos */
+
+.iconogmail { 
+ color: rgb(151, 8, 8); 
+}
+
+.iconowhatsapp { 
+ color: rgb(13, 112, 26); 
+}
+
+.iconogithub { 
+ color: rgb(204, 202, 202); 
+}
 
 /* ===== BOTÓN TOGGLE (MÓVILES) ===== */
+
 .toggle-btn {
-  display: none;                     /* Oculto en desktop */
-  background: none;
-  border: none;
-  color: white;
-  font-size: 2rem;
-  cursor: pointer;
-  transition: color 0.3s ease;
+ display: none;                   
+ background: none;
+ border: none;
+ color: white;
+ font-size: 2rem;
+ cursor: pointer;
+ transition: color 0.3s ease;
 }
 
 /* ===== RESPONSIVE ===== */
+
 @media (max-width: 768px) {
-  .toggle-btn {
-    display: block;                  /* Visible en móviles */
-  }
 
-  .nav-links {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: rgba(15,32,39,0.95);
-    flex-direction: column;           /* Links en columna */
-    width: 100%;
-    display: none;                    /* Oculto por defecto */
-    padding: 1rem 0;
-    border-radius: 0 0 15px 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-    z-index: 1001;                    /* Siempre encima */
-    text-align: center;
-  }
 
-  .nav-links.open {
-    display: flex;
-    animation: slideDown 0.3s ease;  /* Animación al abrir */
-  }
+.iconos {
+ display: none;                 
+}
 
-  @keyframes slideDown {
-    from { opacity: 0; transform: translateY(-10px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
+.toggle-btn {
+ display: block;                 
+}
 
-  .nav-links li {
-    margin: 10px 0;                  /* Espacio entre enlaces móviles */
-  }
+.nav-links {
+ position: absolute;
+ top: 60px;
+ right: 0;
+ background: rgba(5, 5, 5, 0.95);
+ flex-direction: column;
+ width: 100%;
+ display: none;
+ padding: 1rem 0;
+ border-radius: 0 0 15px 15px;
+ box-shadow: 0 4px 8px rgba(20, 20, 20, 0.278);
+ z-index: 1000;
+ text-align: center;
+}
+
+.nav-links.open {
+ display: flex;
+ animation: slideDown 0.3s ease;
+}
+
+.nav-links li {
+ margin: 10px 0;
+}
+
+}
+
+/* ANIMACION  */
+
+@keyframes slideDown {
+
+from {
+ opacity: 0;
+ transform: translateY(-10px);
+}
+
+to {
+ opacity: 1;
+ transform: translateY(0);
+}
+
 }
