@@ -17,8 +17,8 @@ export class Proyectos {
       nombre: 'Barbería Maxi',
       imagen: 'proyecto1.png',
       descripcion: 'Sitio web para barbería diseñado para gestionar citas, mostrar servicios y productos, y permitir a los clientes seleccionar al barbero de su preferencia según su experiencia y especialidad.',
-      url: 'https://github.com/jo1417/mi-proyecto-barberia.git'
-     
+      url: 'https://github.com/jo1417/mi-proyecto-barberia.git',
+      link: 'https://barberiamaxi.vercel.app/'
     },
     {
       nombre: 'Tienda en Línea',
@@ -32,7 +32,7 @@ export class Proyectos {
       imagen: 'proyecto3.png',
       descripcion: 'Galería de imágenes estilo iOS que organiza y muestra fotografías tanto en una vista general como por categorías, ofreciendo una experiencia de navegación sencilla e intuitiva.',
       url: 'https://github.com/jo1417/mi-proyecto-galeria.git',
-      link: 'https://migaleriaios.vercel.app/'
+      link: 'https://migaleriaios.vercel.app'
     }
   ];
 
