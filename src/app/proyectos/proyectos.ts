@@ -31,7 +31,8 @@ export class Proyectos {
       nombre: 'Galería de Fotos',
       imagen: 'proyecto3.png',
       descripcion: 'Galería de imágenes estilo iOS que organiza y muestra fotografías tanto en una vista general como por categorías, ofreciendo una experiencia de navegación sencilla e intuitiva.',
-      url: 'https://github.com/jo1417/mi-proyecto-galeria.git'
+      url: 'https://github.com/jo1417/mi-proyecto-galeria.git',
+      link: 'https://migaleriaios.vercel.app/'
     }
   ];
 
@@ -39,7 +40,7 @@ export class Proyectos {
     window.open(proyecto.url, '_blank');
   }
 
-    verProyecto1(proyecto: any): void {
+    verLink(proyecto: any): void {
     window.open(proyecto.link, '_blank');
   }
 
