@@ -39,4 +39,8 @@ export class Proyectos {
     window.open(proyecto.url, '_blank');
   }
 
+    verProyecto1(proyecto: any): void {
+    window.open(proyecto.link, '_blank');
+  }
+
 }
