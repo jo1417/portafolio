@@ -18,12 +18,14 @@ export class Proyectos {
       imagen: 'proyecto1.png',
       descripcion: 'Sitio web para barbería diseñado para gestionar citas, mostrar servicios y productos, y permitir a los clientes seleccionar al barbero de su preferencia según su experiencia y especialidad.',
       url: 'https://github.com/jo1417/mi-proyecto-barberia.git'
+     
     },
     {
       nombre: 'Tienda en Línea',
       imagen: 'proyecto2.png',
       descripcion: 'Sitio web de mueblería diseñado para mostrar productos por categorías y facilitar el contacto directo con el vendedor a través de WhatsApp para consultas, compras y solicitudes de crédito.',
-      url: 'https://github.com/jo1417/mi-proyecto-tienda.git'
+      url: 'https://github.com/jo1417/mi-proyecto-tienda.git',
+      link: 'https://mitiendaweb.vercel.app'
     },
     {
       nombre: 'Galería de Fotos',
